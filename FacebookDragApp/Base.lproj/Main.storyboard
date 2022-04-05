@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FacebookDragApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMS-Vl-vBi">
+                                <rect key="frame" x="174" y="433" width="66" height="30"/>
+                                <state key="normal" title="Tap Here!"/>
+                                <connections>
+                                    <action selector="actionTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3t-4d-rNi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XMS-Vl-vBi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DUG-PG-hXV"/>
+                            <constraint firstItem="XMS-Vl-vBi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OEH-Xe-e90"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="96"/>
+        </scene>
+        <!--Reaction View Controller-->
+        <scene sceneID="IYF-7b-Cxw">
+            <objects>
+                <viewController storyboardIdentifier="ReactionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ue-xp-I44" customClass="ReactionViewController" customModule="FacebookDragApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8i2-NK-UYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="p8r-62-PQE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBc-af-wan">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKj-w1-wbu">
+                                <rect key="frame" x="182" y="58" width="50" height="6"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="Dk5-NW-Xiu"/>
+                                    <constraint firstAttribute="width" constant="50" id="pRt-2C-fS2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Apj-RE-iA1">
+                                <rect key="frame" x="0.0" y="74" width="414" height="822"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iBz-gh-HFx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Apj-RE-iA1" firstAttribute="top" secondItem="BKj-w1-wbu" secondAttribute="bottom" constant="10" id="5u1-Cj-T8D"/>
+                            <constraint firstItem="p8r-62-PQE" firstAttribute="leading" secondItem="iBz-gh-HFx" secondAttribute="leading" id="6Ie-ok-wj0"/>
+                            <constraint firstItem="EBc-af-wan" firstAttribute="leading" secondItem="iBz-gh-HFx" secondAttribute="leading" id="9pm-9B-QYH"/>
+                            <constraint firstAttribute="bottom" secondItem="EBc-af-wan" secondAttribute="bottom" id="CxB-PI-BB9"/>
+                            <constraint firstItem="p8r-62-PQE" firstAttribute="trailing" secondItem="iBz-gh-HFx" secondAttribute="trailing" id="FW5-hj-Ya1"/>
+                            <constraint firstItem="p8r-62-PQE" firstAttribute="top" secondItem="8i2-NK-UYJ" secondAttribute="top" id="HoT-gl-f3Q"/>
+                            <constraint firstItem="Apj-RE-iA1" firstAttribute="leading" secondItem="iBz-gh-HFx" secondAttribute="leading" id="NNZ-ZA-Z9M"/>
+                            <constraint firstItem="BKj-w1-wbu" firstAttribute="centerX" secondItem="iBz-gh-HFx" secondAttribute="centerX" id="P5J-DZ-6Xc"/>
+                            <constraint firstItem="Apj-RE-iA1" firstAttribute="trailing" secondItem="iBz-gh-HFx" secondAttribute="trailing" id="U3U-W2-TBB"/>
+                            <constraint firstItem="Apj-RE-iA1" firstAttribute="top" secondItem="iBz-gh-HFx" secondAttribute="top" constant="30" id="aTG-qH-5ul"/>
+                            <constraint firstItem="EBc-af-wan" firstAttribute="trailing" secondItem="iBz-gh-HFx" secondAttribute="trailing" id="ega-qv-hKQ"/>
+                            <constraint firstItem="EBc-af-wan" firstAttribute="top" secondItem="8i2-NK-UYJ" secondAttribute="top" id="k0O-cm-VkL"/>
+                            <constraint firstAttribute="bottom" secondItem="p8r-62-PQE" secondAttribute="bottom" id="kIJ-2S-12a"/>
+                            <constraint firstAttribute="bottom" secondItem="Apj-RE-iA1" secondAttribute="bottom" id="z2W-y4-gSk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="Apj-RE-iA1" id="vNy-YN-8ci"/>
+                        <outlet property="dimmerView" destination="EBc-af-wan" id="bnM-lS-cy1"/>
+                        <outlet property="handleView" destination="BKj-w1-wbu" id="KNL-kZ-mYc"/>
+                        <outletCollection property="topConstraint" destination="aTG-qH-5ul" collectionClass="NSMutableArray" id="sRB-Oi-xaQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5v-TQ-pvP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753.62318840579712" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iphone.png" width="750" height="1334"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
